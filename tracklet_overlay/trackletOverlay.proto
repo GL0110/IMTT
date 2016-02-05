@@ -1,0 +1,15 @@
+package trackletOverlay;
+
+message Pixel {
+    required uint32 x = 1;
+    required uint32 y = 2;
+}
+message Tracklet {
+    required string name = 1;
+    repeated Pixel pixels = 3;
+
+}
+
+message Overlay {
+    repeated Tracklet tracklets = 1;
+}
