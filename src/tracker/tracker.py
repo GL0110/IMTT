@@ -8,11 +8,11 @@ import sys
 class Track:
     def __init__(self, init_box):
         self.box = init_box
-        self.pos = GetBBoxPos(box)
+        self.pos = GetBBoxPos(self.box)
         self.pos_arr = [self.pos]
 
     def UpdatePosition(self, bbox):
-        self.box = bbox_arr[i]
+        self.box = bbox
         self.pos = GetBBoxPos(self.box)
         self.pos_arr.append(self.pos)
 
