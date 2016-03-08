@@ -36,9 +36,9 @@ class Track:
 
 # Calculate euclidean distance between two points.
 def CalcDistance(pos1, pos2):
-    x = pos1[0]*pos2[0]
-    y = pos1[1]*pos2[1]
-    return int(np.sqrt(x+y))
+    dx = (pos1[0] - pos2[0])**2
+    dy = (pos1[1] - pos2[1])**2
+    return int(np.sqrt(dx + dy))
 
 
 # Get center coordinate of a bounding box.
