@@ -29,6 +29,21 @@ class BBoxUtils_Test(unittest.TestCase):
     pos2 = (1, 0)
     expected_dist = 1
     self.assertEqual(tracker.CalcDistance(pos1, pos2), expected_dist)
+    pos1 = (0, 0)
+    pos2 = (0, 1)
+    self.assertEqual(tracker.CalcDistance(pos1, pos2), expected_dist)
+
+  # Test Distance calc where pos2 is greater than pos1, such that
+  # pos1.x - pos2.x < 0
+  def test_DistCalcWithReverseOrderedPoints(self):
+    pos1 = (1, 0)
+    pos2 = (2, 0)
+    expected_dist = 1
+    self.assertEqual(tracker.CalcDistance(pos1, pos2), expected_dist)
+    pos1 = (0, 1)
+    pos2 = (0, 2)
+    expected_dist = 1
+    self.assertEqual(tracker.CalcDistance(pos1, pos2), expected_dist)
 
 
 
