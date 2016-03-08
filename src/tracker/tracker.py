@@ -44,7 +44,7 @@ def CalcDistance(pos1, pos2):
 # Get center coordinate of a bounding box.
 def GetBBoxPos(bbox):
     x_arr = [coord[0] for coord in bbox]
-    y_arr = [ccord[1] for coord in bbox]
+    y_arr = [coord[1] for coord in bbox]
     min_x = min(x_arr)
     min_y = min(y_arr)
     max_x = max(x_arr)
